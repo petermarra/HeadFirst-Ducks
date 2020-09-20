@@ -54,7 +54,9 @@ namespace Ducks
         {
             foreach (var duck in ducks)
             {
-                Console.WriteLine($"{duck.Size}-inch {duck.Kind.ToString()}");
+                //Console.WriteLine($"{duck.Size}-inch {duck.Kind.ToString()}");
+                //use the override ToString() in the duck class.
+                Console.WriteLine(duck);
             }
             Console.WriteLine("End of Ducks");
         }
