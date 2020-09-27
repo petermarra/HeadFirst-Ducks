@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ducks
 {
-    class Duck: IComparable<Duck>
+    class Duck: Bird, IComparable<Duck>
     {
         public int Size;
         public KindOfDuck Kind;

@@ -61,6 +61,21 @@ namespace Ducks
                 Duck duck = enumerator.Current;
                 Console.WriteLine(duck);
             }
+
+            //upcast Ienumerable (covariance)
+            Console.WriteLine("\r\n--IEnumerator upcast");
+            IEnumerable<Bird> upcastDucks = ducks;
+            List<Bird> birds = new List<Bird>();
+            birds.Add(new Bird() { Name = "Feathers" });
+            birds.AddRange(upcastDucks);
+            birds.Add(new Penguin() { Name = "George" });
+            foreach (Bird bird in birds)
+            {
+                Console.WriteLine(bird);
+            }
+            {
+
+            }
         }
         public static void PrintDucks(List<Duck> ducks)
         {
