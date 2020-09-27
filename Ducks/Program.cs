@@ -49,6 +49,18 @@ namespace Ducks
             ducks.Sort(comparer);
             PrintDucks(ducks);
 
+            //IEnumerator
+            Duck[] duckArray = new Duck[6];
+            duckArray.GetEnumerator();
+
+            Console.WriteLine("\r\n--IEnumerator loop ");
+
+            IEnumerator<Duck> enumerator = ducks.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                Duck duck = enumerator.Current;
+                Console.WriteLine(duck);
+            }
         }
         public static void PrintDucks(List<Duck> ducks)
         {

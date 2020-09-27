@@ -21,6 +21,7 @@ namespace Ducks
         }
         public override string ToString()
         {
+            //Size += 10;
             return $"A {Size} inch {Kind.ToString()}";
         }
     }
